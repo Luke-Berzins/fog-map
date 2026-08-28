@@ -46,18 +46,21 @@ function proj(lon, lat) {
 /* ------------------------------------------------------------ */
 const CH = [
   { yr: "c. 1000", era: "c. 1000", title: "Vinland", who: "Leif Eiriksson and the Greenlanders",
+    wiki: ["Vinland", "Leif Erikson"], see: ["L'Anse aux Meadows"],
     text: "Norse ships coast three lands south from Greenland — Helluland's flat stones, Markland's forests, Vinland's grapes. A camp at L'Anse aux Meadows lasts a few seasons. Then Europe forgets for five hundred years.",
     cost: "Abandoned inside a decade. The knowledge survives only in sagas.",
     add: ["Helluland, Markland, Vinland — three names that never reach a map"],
     b: [[-45,61,180],[-50,62.5,180],[-51,64,180],[-53,66,180],[-62,65,180],[-63,63,170],[-60,58,170],[-58,55,160],[-57,52,160],[-56,50,160],[-55.5,51.6,150],[-55,48.5,150],[-58,49,150]] },
 
   { yr: "1513", era: "1513–1519", title: "La Florida and the Gulf", who: "Ponce de León, Álvarez de Pineda",
+    wiki: ["Juan Ponce de León", "Alonso Álvarez de Pineda"], see: [["Dry Tortugas", "Dry Tortugas National Park"]],
     text: "Ponce de León names a peninsula for the Easter feast and takes it for an island. Six years later Pineda runs the whole Gulf shore and proves it isn't — and that there is no strait through to Asia anywhere along it.",
     cost: "Ponce de León dies of a Calusa arrow wound in 1521.",
     strike: ["Florida as an island", "a strait through the Gulf"],
     b: [[-80.1,26.2,150],[-80.4,25.2,150],[-81.8,26.2,150],[-82.7,27.8,150],[-84,29.9,150],[-86,30.3,150],[-88.5,30.3,150],[-90,29.2,150],[-93.5,29.6,150],[-95.5,28.8,150],[-97.3,26.2,150],[-97.2,21.5,150],[-91,21,160],[-87,21.3,150],[-81.3,29.9,140],[-80.9,32.1,150],[-79,33,150],[-77.5,20.5,160],[-82,22.5,160],[-75,20,160],[-73,19,150],[-66.5,18.3,150]] },
 
   { yr: "1534", era: "1534–1542", title: "The great river", who: "Jacques Cartier",
+    wiki: ["Jacques Cartier"], see: [["Gulf of St. Lawrence", "Gulf of Saint Lawrence"]],
     text: "Cartier is looking for a strait to Asia and finds a river instead. He gets as far as Hochelaga, where rapids stop him. He names them Lachine — China — and turns back.",
     guide: "Domagaya and Taignoagny, sons of Donnacona, taken to France and brought back to interpret.",
     cost: "Scurvy kills about 25 of 110 wintering at Stadacona. Domagaya's cedar remedy saves the rest.",
@@ -65,6 +68,7 @@ const CH = [
     b: [[-57,51.5,150],[-60,49.5,160],[-62,48.5,160],[-64,48.5,150],[-66,49,150],[-68,49,150],[-70,47.5,140],[-71.2,46.8,140],[-72.5,46.2,130],[-73.6,45.5,130],[-64,46.5,150],[-60,46.5,140],[-56,47.5,150],[-53,48,150],[-59,47,150]] },
 
   { yr: "1539", era: "1539–1542", title: "Through the southeast", who: "Hernando de Soto",
+    wiki: ["Hernando de Soto"], see: ["Mississippi River"],
     text: "Six hundred men march four years through the Mississippian towns looking for another Peru. They find no gold, cross the great river, and leave smallpox behind. De Soto is buried in it.",
     guide: "Interpreters and porters taken by force from nearly every town on the route.",
     cost: "About 600 set out; roughly half reached Mexico. The towns they passed through fared worse.",
@@ -72,6 +76,7 @@ const CH = [
     b: [[-82.6,27.7,160],[-84.3,30.4,160],[-82,32.5,160],[-84.5,34.5,160],[-88,34.3,160],[-90.5,34.8,160],[-92.5,34.7,160],[-95,33,160],[-93,31.5,160],[-91,31.5,160],[-89.9,30,150],[-86,33,160],[-80.5,33.5,150]] },
 
   { yr: "1540", era: "1540–1542", title: "The cities of Cíbola", who: "Francisco Vázquez de Coronado",
+    wiki: ["Francisco Vázquez de Coronado"], see: ["Grand Canyon"],
     text: "The seven golden cities turn out to be Zuñi pueblos. Coronado pushes on to Quivira in the Kansas grass on the word of a guide who is leading him out to die, and comes back with nothing but a continent's worth of coastline in his head.",
     guide: "El Turco, a captive from the plains, who steered the column into the grass and was executed for it.",
     cost: "Two years, no gold, Coronado broken by a fall from his horse.",
@@ -79,40 +84,47 @@ const CH = [
     b: [[-107,31,160],[-110.9,32.2,160],[-109,34.5,160],[-107.5,35.2,160],[-106.6,35.7,160],[-104,35.2,160],[-101,36.5,160],[-99,37.5,160],[-97.5,38.5,160],[-112.1,36.1,170],[-113,35,160],[-114,34.5,160]] },
 
   { yr: "1542", era: "1542", title: "The coast of California", who: "Juan Rodríguez Cabrillo",
+    wiki: ["Juan Rodríguez Cabrillo"], see: [["Channel Islands", "Channel Islands (California)"], "Cabrillo National Monument"],
     text: "Cabrillo sails north past the Channel Islands, breaks a limb and dies of it, and his crew carries on to somewhere near the Oregon line before the weather turns them. The coast they chart stays a line without a hinterland for two hundred years.",
     cost: "Cabrillo dies of an infected fracture, wintering on San Miguel Island.",
     b: [[-117.2,32.7,150],[-118.5,34,150],[-120.5,34.5,150],[-122,36.6,150],[-123.5,38.5,150],[-124,40.5,150],[-124.2,42,150]] },
 
   { yr: "1603", era: "1603–1635", title: "The cartographer of New France", who: "Samuel de Champlain",
+    wiki: ["Samuel de Champlain"], see: ["Lake Champlain", "Bay of Fundy"],
     text: "Champlain surveys Acadia, founds Quebec, and takes the Ottawa–Nipissing route inland. His 1632 map is the first to draw the Great Lakes as anything but rumour.",
     guide: "Algonquin and Huron-Wendat allies, who chose the route and set the terms of travel.",
     add: ["the Great Lakes"],
     b: [[-66.5,44.8,160],[-64,45,150],[-70.5,43.5,150],[-73.4,44.5,120],[-73.3,45.4,130],[-75.7,45.4,130],[-77.5,46,130],[-79.5,46.3,130],[-80.9,45.9,140],[-81.5,45.2,150],[-82.5,44.5,140],[-80.5,44.5,130],[-79.5,43.8,130],[-77.5,44,130],[-76,44.2,120],[-82.5,46,140],[-84.7,45.9,130]] },
 
   { yr: "1607", era: "1607–1609", title: "The Chesapeake", who: "John Smith",
+    wiki: [["John Smith", "John Smith (explorer)"]], see: ["Chesapeake Bay"],
     text: "Smith maps the bay and its rivers in an open boat, stopping at every Powhatan town that will have him. His 1612 chart is so good the English are still using it sixty years later.",
     guide: "Powhatan towns fed the party and named the rivers he wrote down.",
     b: [[-76.4,37,140],[-76.5,38.3,140],[-76.2,39.3,140],[-77.4,38.9,140],[-77.9,37.6,140],[-75.9,37.2,140],[-76.9,36.9,140],[-75.5,35.9,140]] },
 
   { yr: "1609", era: "1609–1611", title: "The inland sea", who: "Henry Hudson",
+    wiki: ["Henry Hudson"], see: ["Hudson Bay"],
     text: "Hudson tries a river first, then a strait, and comes out into a bay so vast he takes it for the Pacific. He winters in James Bay, his crew mutinies, and he is set adrift. The bay keeps his name.",
     cost: "Hudson, his son, and seven others set adrift in June 1611. None ever found.",
     strike: ["the bay as an opening to the Pacific"],
     b: [[-74,40.7,140],[-73.9,42,140],[-73.7,42.7,140],[-64,61.5,160],[-68,62,160],[-72,62.5,160],[-76,62.5,160],[-79,62,160],[-82,61.5,160],[-85,60,170],[-82,58,170],[-80,55,160],[-79.5,52.5,150],[-79.8,51.3,140],[-81.5,51.6,140],[-82,53,150],[-78.5,57,160],[-78,60,160]] },
 
   { yr: "1634", era: "1634–1682", title: "Down the Mississippi", who: "Nicolet, Marquette & Jolliet, La Salle",
+    wiki: ["Jean Nicolet", "Jacques Marquette", "Louis Jolliet", ["La Salle", "René-Robert Cavelier, Sieur de La Salle"]], see: ["Mississippi River", "Niagara Falls"],
     text: "Nicolet reaches Green Bay in a damask robe, expecting China. Forty years later Marquette and Jolliet find the river runs south, not west — so it goes to the Gulf, not the Pacific. La Salle follows it to the mouth and claims the whole watershed for Louis XIV.",
     guide: "Illinois and Miami guides drew the portage route on birchbark before they set out.",
     strike: ["a western outlet for the Mississippi"],
     b: [[-84.5,45.8,150],[-87.6,44.5,150],[-88,46.5,150],[-89,43.5,150],[-90.5,43.8,160],[-91.2,41.5,160],[-90.6,39.8,160],[-90.2,38.6,160],[-89.5,36.5,160],[-90,35,160],[-91,33,160],[-91.2,30.9,160],[-89.9,29.9,150],[-88,42,150],[-86,41.7,150],[-85,42.5,150],[-92,42,160]] },
 
   { yr: "1670", era: "1670–1743", title: "Rupert's Land, sight unseen", who: "The Hudson's Bay Company, Kelsey, La Vérendrye",
+    wiki: ["Hudson's Bay Company", "Henry Kelsey", ["La Vérendrye", "Pierre Gaultier de Varennes, sieur de La Vérendrye"]], see: ["Lake Winnipeg"],
     text: "A London charter hands over every river draining into the bay — a territory no one at the table has seen. Henry Kelsey walks out onto the plains in 1690; La Vérendrye's sons push west toward mountains they have only been told about.",
     guide: "Cree and Assiniboine middlemen ran the trade the Company depended on, and drew the maps it used.",
     add: ["Rupert's Land — a border defined by watershed, not by anyone living in it"],
     b: [[-94,58.8,180],[-92.3,57,180],[-88,55.5,180],[-85.5,55.3,170],[-82,52.5,170],[-96,55,180],[-97.3,53.8,170],[-96.8,50.5,170],[-99,51,170],[-101,52,180],[-104,52.5,180],[-107,53,180],[-110,53.3,170],[-100,50,170],[-97.2,49.5,160],[-101,47.5,160],[-104,49,170],[-92,54,180],[-89,52,170],[-85,50,170]] },
 
   { yr: "1769", era: "1769–1776", title: "Alta California and the Great Basin", who: "Anza, Domínguez & Escalante",
+    wiki: ["Juan Bautista de Anza", ["Domínguez–Escalante", "Domínguez–Escalante Expedition"]], see: ["Utah Lake", "Great Basin"],
     text: "Anza opens a land route from Sonora to San Francisco Bay. Two friars set out from Santa Fe to reach Monterey, get turned back by the Utah winter, and instead put the first European lines through the Great Basin.",
     guide: "Ute guides through the Wasatch; Southern Paiute directions on the way back.",
     strike: ["a road from Santa Fe to Monterey"],
@@ -120,6 +132,7 @@ const CH = [
     b: [[-117.2,32.7,150],[-117.8,33.7,150],[-118.5,34.1,150],[-120.6,35.4,150],[-121.9,36.6,150],[-122.4,37.8,150],[-114.6,32.7,150],[-112,33.4,150],[-110.9,32.2,150],[-108,36,160],[-106.6,35.7,150],[-108.5,38,160],[-110,39,160],[-111.9,40.3,160],[-113.5,39,160],[-112.5,37.5,160],[-114,36.5,160]] },
 
   { yr: "1770", era: "1770–1772", title: "Overland to the Coppermine", who: "Samuel Hearne and Matonabbee",
+    wiki: ["Samuel Hearne", "Matonabbee"], see: ["Bloody Falls", "Great Slave Lake"],
     text: "Two attempts fail before Matonabbee agrees to lead. They walk to the Arctic Ocean and back, and Hearne returns with the answer nobody in London wants: there is no navigable passage here.",
     guide: "Matonabbee, Dene leader, who set the route, the pace and the provisioning — and without whom Hearne fails a third time.",
     cost: "Some 5,000 km on foot. Hearne witnesses the killing at Bloody Falls and can do nothing.",
@@ -127,6 +140,7 @@ const CH = [
     b: [[-94,58.8,160],[-98,60,170],[-102,62,180],[-106,63.5,180],[-110,64.5,180],[-113.5,65.3,170],[-115.1,67.8,170],[-112,63,180],[-109,62.5,170],[-113,62,180],[-117,61.2,170],[-105,60,180],[-100,64,180]] },
 
   { yr: "1778", era: "1778–1793", title: "From Canada, by land", who: "Peter Pond, Alexander Mackenzie",
+    wiki: ["Peter Pond", ["Alexander Mackenzie", "Alexander Mackenzie (explorer)"]], see: ["Lake Athabasca", "Mackenzie River"],
     text: "Pond's rough sketches of Athabasca convince Mackenzie a river runs to the Pacific. It runs to the Arctic instead. Four years later he crosses the Rockies to Bella Coola and writes it on a rock.",
     guide: "Dene guides on the northern river; Nuxalk and Dakelh routes over the mountains to the coast.",
     cost: "He names the great river Disappointment.",
@@ -134,12 +148,14 @@ const CH = [
     b: [[-111.4,58.5,170],[-110,58.7,160],[-113,60.5,170],[-114,61.2,170],[-117.2,61.2,170],[-121,63.5,180],[-125,65.5,180],[-129,67.3,180],[-133.7,68.3,180],[-125.5,66.3,180],[-121,66.8,180],[-118,66.3,170],[-115,58,170],[-119,56,170],[-122,55.7,170],[-124,54,170],[-122.7,52.4,160],[-126.7,52.4,160],[-128,52.5,150],[-113,54,170]] },
 
   { yr: "1790", era: "1790–1814", title: "The great map of the North-West", who: "David Thompson",
+    wiki: [["David Thompson", "David Thompson (explorer)"]], see: ["Columbia River", "Rocky Mountains"],
     text: "Thompson surveys the western interior on foot and by canoe, fixing positions by star sight. The map he finishes in 1814 is accurate enough to stay in use for the rest of the century.",
     guide: "Charlotte Small, Métis, his wife and interpreter, travelled almost the entire survey with him.",
     cost: "Twenty-eight years in the field. He dies poor and largely unread.",
     b: [[-115,52,170],[-117,51.5,170],[-116.9,50.9,160],[-117.5,49.2,160],[-119,47.6,160],[-121,46.2,160],[-123.9,46.2,160],[-120,50.5,170],[-121.5,53.9,170],[-118,54,170],[-113,53.5,170],[-109,53.3,170],[-106,53.2,170],[-102,53.3,170],[-98,54,170],[-116,58,170],[-119,58,170],[-124,58,180],[-113,49.5,170],[-110,50,170],[-106,50,170],[-102,50,170],[-98,49.5,160],[-90,48.5,170],[-93,50,180],[-88,50,170],[-95,52,180]] },
 
   { yr: "1804", era: "1804–1806", title: "The Corps of Discovery", who: "Meriwether Lewis, William Clark",
+    wiki: ["Lewis and Clark Expedition", "Sacagawea"], see: [["Great Falls of the Missouri", "Great Falls of the Missouri River"], "Columbia River"],
     text: "Jefferson buys a territory nobody has surveyed and sends thirty-odd people to find out what is in it. There is no water route across. The Bitterroots nearly finish them.",
     guide: "Sacagawea, Lemhi Shoshone, whose brother sold them the horses; Old Toby over the Bitterroots.",
     cost: "One death in two years — Sergeant Floyd, of a burst appendix, before they were properly started.",
@@ -147,18 +163,21 @@ const CH = [
     b: [[-90.2,38.7,160],[-92.5,39.2,160],[-94.6,39.1,160],[-95.9,41.3,160],[-97.5,43,160],[-100,46.9,170],[-101.3,47.3,170],[-104,47.9,170],[-107,47.9,170],[-110,47.9,170],[-112,47.5,160],[-113.8,46.5,160],[-115,46.4,160],[-116.9,46.4,160],[-118.5,46,160],[-121,45.7,160],[-123.9,46.2,160],[-109,45.7,160],[-106,46.5,160]] },
 
   { yr: "1806", era: "1806–1820", title: "The Great American Desert", who: "Zebulon Pike, Stephen Long",
+    wiki: ["Pike Expedition", "Stephen Harriman Long"], see: ["Pikes Peak"],
     text: "Pike sees his peak and fails to climb it, then gets arrested by the Spanish. Long crosses the same plains and labels them unfit for farming. The label sticks to American maps for fifty years and shapes where people go.",
     cost: "Pike taken to Chihuahua under guard; his papers confiscated.",
     add: ["the Great American Desert — a lie that lasted fifty years"],
     b: [[-95,39,160],[-98,38.5,160],[-101,38.3,160],[-104,38.7,160],[-105.1,38.8,160],[-106.3,37.7,160],[-105.9,35.7,160],[-104.7,41.1,160],[-105,40.3,160],[-102,40,160],[-99,40.5,160],[-96,41,160]] },
 
   { yr: "1812", era: "1812–1818", title: "A line drawn on paper", who: "Brock, Drummond, and the surveyors",
+    wiki: ["War of 1812", "Treaty of 1818"], see: ["Lake Erie"],
     text: "The war settles nothing on the ground and everything on the map. Fort Erie is besieged and blown up; three years later negotiators run the border along the 49th parallel, straight through country neither side has walked.",
     cost: "A border agreed in London and Washington, over the heads of everyone living along it.",
     add: ["the 49th parallel"],
     b: [[-79,42.9,120],[-79.2,43.6,120],[-81,42.5,130],[-83,42.3,130],[-82.5,45.5,130],[-76.5,44.3,120],[-74.5,45,120],[-71,45,120],[-67.8,47,130],[-95,49,160],[-100,49,170],[-110,49,170],[-114,49,160],[-120,49,170],[-123,49,150],[-89,48,160],[-84,46.5,140]] },
 
   { yr: "1824", era: "1824–1846", title: "Mountain men and the Pathfinder", who: "Jedediah Smith, John Frémont",
+    wiki: ["Jedediah Smith", "John C. Frémont"], see: [["South Pass", "South Pass (Wyoming)"], "Great Salt Lake"],
     text: "Trappers rediscover South Pass, the gap that makes the Oregon Trail possible, and tell almost no one. Frémont arrives twenty years later with instruments and a publisher, maps what they already knew, and finally kills off the river to the Pacific that never existed.",
     guide: "Crow knowledge of South Pass; Kit Carson and Thomas Fitzpatrick on the ground.",
     cost: "Jedediah Smith killed on the Cimarron in 1831, aged thirty-two.",
@@ -166,12 +185,14 @@ const CH = [
     b: [[-107.5,42.5,170],[-109.6,43.2,170],[-111,43.5,170],[-112.5,42,160],[-114,41,160],[-115,40,160],[-117,40.5,160],[-119,39.5,160],[-120.5,39.3,160],[-121.5,38.6,160],[-118.5,37,160],[-116,36,160],[-114,35,160],[-113,37,160],[-111,38,160],[-109,40,160],[-106.5,40,160],[-110,44.5,170],[-113,45,170],[-116,44,160],[-119,44,160],[-121,42,160],[-122,41,160],[-104,41,160]] },
 
   { yr: "1869", era: "1869", title: "Through the canyon", who: "John Wesley Powell",
+    wiki: ["John Wesley Powell", ["the 1869 descent", "Powell Geographic Expedition of 1869"]], see: ["Grand Canyon"],
     text: "Ten men and four boats into the last unmapped gap in the United States, Powell rowing one-armed. The river is faster and longer than anyone has told them.",
     cost: "Six came through. The three who climbed out at Separation Canyon were never seen again.",
     strike: ["the last blank space in the United States"],
     b: [[-109.5,40.5,150],[-110.5,38.5,150],[-110,37.9,150],[-111.5,37,150],[-112.5,36.3,150],[-113.5,36.1,150],[-114,36.1,150]] },
 
   { yr: "1576", era: "1576–1859", title: "The last blank", who: "Frobisher to Franklin",
+    wiki: ["Northwest Passage", "Martin Frobisher", "Franklin's lost expedition"], see: ["Baffin Island"],
     text: "Three centuries of ships feeding themselves into the ice for a passage that turns out to be unusable. Franklin's two vessels vanish in 1845; the expeditions sent to find him chart more of the Arctic than the passage ever would have.",
     guide: "Inuit testimony led searchers to the truth years before the Admiralty would accept it.",
     cost: "Franklin's 129 men, all lost. Around forty expeditions sent after them.",
@@ -179,6 +200,7 @@ const CH = [
     b: [[-64,62.8,170],[-68,64,180],[-72,66,180],[-75,70,190],[-77,74,190],[-80,77,190],[-72,76,190],[-68,70,180],[-90,74.5,190],[-100,74.5,190],[-110,74.6,190],[-118,74.5,190],[-95,72,180],[-92,70,180],[-96,69,180],[-100,69,180],[-105,69,180],[-110,69,180],[-115,68.5,180],[-120,70,180],[-123,72,180],[-108,73,180],[-102,72,180],[-85,72,180],[-88,76,190],[-95,77,190],[-105,78,190],[-88,80,190],[-78,80,190],[-70,81,190],[-118,77,190],[-135,69.5,170],[-140,70,170],[-90,66,180],[-85,68,180],[-80,68,180],[-60,76,190],[-65,72,180]] },
 
   { yr: "1869", era: "1869–1900", title: "The survey", who: "Hayden, King, Wheeler, Powell; the Dominion Land Survey; the Geological Survey of Canada",
+    wiki: [["U.S. Geological Survey", "United States Geological Survey"], ["Hayden Survey, 1871", "Hayden Geological Survey of 1871"], "Wheeler Survey", "Dominion Land Survey", "Geological Survey of Canada"], see: ["Yellowstone National Park"],
     text: "The last of the fog goes not to explorers but to salaried men working in grids on government contract — triangulating townships, running baselines, filling in the parts nobody wrote a book about. There is no moment of discovery here. It is paperwork, and it finishes the map.",
     cost: "The blanks close on salary, not on adventure. Nobody remembers a single name.",
     full: true, b: [] },
@@ -234,179 +256,37 @@ const CONJ = [
   ["parts unknown", -152, 61, 13, 2, 1, 22],
 ];
 
-/* ---------- the beasts. Shared data so the share-card renderer can reuse them ---------- */
-const BEAST = {
-  serpent: {
-    fills: [
-      "M-148 -6 C-124 -34 -92 -36 -70 -10 C-52 12 -28 14 -10 -12 C2 -30 18 -40 36 -40 L36 -22 C18 -22 2 -12 -10 6 C-28 32 -52 30 -70 8 C-92 -18 -124 -16 -148 12 Z",
-      "M-148 -6 C-160 -18 -174 -24 -188 -24 C-180 -12 -178 4 -186 18 C-172 14 -158 6 -148 12 Z",
-      "M26 -42 C48 -56 78 -53 92 -39 C98 -32 95 -24 86 -24 C70 -24 48 -30 34 -34 C29 -36 26 -39 26 -42 Z",
-      "M40 -29 C52 -19 72 -14 90 -17 C80 -23 70 -27 60 -30 C52 -32 45 -31 40 -29 Z",
-      "M40 -46 L44 -63 L53 -48 Z",
-      "M20 -38 L15 -55 L31 -44 Z", "M2 -28 L-2 -47 L14 -36 Z", "M-14 -12 L-19 -31 L-2 -22 Z",
-      "M-84 -26 L-88 -44 L-71 -33 Z", "M-106 -25 L-111 -43 L-93 -33 Z",
-      "M-40 16 C-33 29 -22 35 -9 35 C-18 26 -23 18 -23 9 Z"],
-    heavy: [
-      "M-148 -6 C-124 -34 -92 -36 -70 -10 C-52 12 -28 14 -10 -12 C2 -30 18 -40 36 -40",
-      "M36 -22 C18 -22 2 -12 -10 6 C-28 32 -52 30 -70 8 C-92 -18 -124 -16 -148 12",
-      "M40 -29 C52 -19 72 -14 90 -17"],
-    paths: [
-      "M-148 -6 C-160 -18 -174 -24 -188 -24 C-180 -12 -178 4 -186 18 C-172 14 -158 6 -148 12",
-      "M50 -35 l3 7 M62 -33 l3 7 M74 -31 l3 7", "M58 -25 l-2 -6 M73 -22 l-2 -6",
-      "M-40 16 C-33 29 -22 35 -9 35 C-18 26 -23 18 -23 9"],
-    hatch: [
-      "M-130 -12 C-126 -6 -126 0 -130 6", "M-114 -20 C-109 -13 -109 -5 -114 2",
-      "M-96 -22 C-91 -15 -91 -6 -96 1", "M-78 -16 C-73 -8 -73 0 -78 8",
-      "M-58 2 C-53 9 -53 17 -58 24", "M-40 12 C-35 18 -35 25 -40 31",
-      "M-22 8 C-17 14 -17 21 -22 26", "M-4 -8 C1 -2 1 5 -4 11",
-      "M12 -22 C17 -16 17 -9 12 -3", "M26 -32 C31 -26 31 -19 26 -13",
-      "M-13 32 C-16 26 -19 20 -19 13", "M-27 30 C-27 24 -26 18 -23 12"],
-    rings: [[42, -41, 5]], dots: [[42, -41, 2.4]] },
-
-  kraken: {
-    fills: [
-      "M0 -42 C26 -42 42 -24 42 -5 C42 13 28 24 0 24 C-28 24 -42 13 -42 -5 C-42 -24 -26 -42 0 -42 Z",
-      "M-34 8 C-54 20 -68 36 -64 54 C-61 63 -52 63 -50 54 C-52 44 -56 40 -52 30 C-47 20 -38 14 -30 10 Z",
-      "M-20 20 C-34 38 -40 56 -32 70 C-27 78 -18 76 -18 68 C-22 58 -24 50 -19 40 C-15 32 -10 26 -8 22 Z",
-      "M-4 24 C-8 44 -14 60 -4 74 C2 81 10 78 8 70 C2 60 2 52 6 42 C9 34 10 28 10 24 Z",
-      "M14 22 C24 40 36 50 36 66 C36 74 28 77 25 69 C25 59 20 52 14 44 C10 38 8 30 8 24 Z",
-      "M28 12 C48 22 62 22 70 36 C74 44 68 51 62 45 C58 37 52 32 42 28 C34 25 28 20 26 16 Z",
-      "M-38 2 C-58 4 -74 -6 -82 8 C-86 16 -79 24 -73 17 C-70 9 -64 5 -54 4 C-46 3 -40 4 -37 5 Z",
-      "M-6 4 L0 13 L6 4 Z"],
-    heavy: [
-      "M0 -42 C26 -42 42 -24 42 -5 C42 13 28 24 0 24 C-28 24 -42 13 -42 -5 C-42 -24 -26 -42 0 -42 Z"],
-    paths: [
-      "M-34 8 C-54 20 -68 36 -64 54 C-61 63 -52 63 -50 54",
-      "M-20 20 C-34 38 -40 56 -32 70 C-27 78 -18 76 -18 68",
-      "M-4 24 C-8 44 -14 60 -4 74 C2 81 10 78 8 70",
-      "M14 22 C24 40 36 50 36 66 C36 74 28 77 25 69",
-      "M28 12 C48 22 62 22 70 36 C74 44 68 51 62 45",
-      "M-38 2 C-58 4 -74 -6 -82 8 C-86 16 -79 24 -73 17"],
-    hatch: [
-      "M-30 -16 C-21 -26 -10 -30 0 -30 C10 -30 21 -26 30 -16",
-      "M-34 -6 C-24 -18 -12 -22 0 -22 C12 -22 24 -18 34 -6",
-      "M-26 14 C-16 20 -8 22 0 22 M8 21 C18 19 27 15 33 9"],
-    rings: [[-16, -13, 7], [16, -13, 7]],
-    dots: [[-16, -13, 3.4], [16, -13, 3.4],
-           [-58, 30, 1.8], [-54, 42, 1.8], [-27, 42, 1.8], [-23, 56, 1.8],
-           [-2, 44, 1.8], [0, 60, 1.8], [24, 44, 1.8], [30, 58, 1.8],
-           [48, 26, 1.8], [60, 34, 1.8]] },
-
-  whale: {
-    fills: [
-      "M-58 4 C-46 -26 4 -34 34 -14 C48 -5 49 8 36 15 C12 30 -34 26 -58 10 Z",
-      "M-58 6 C-72 0 -84 -8 -94 -18 C-87 -4 -87 14 -94 28 C-82 20 -70 13 -58 8 Z",
-      "M-6 18 C2 30 14 33 24 30 C16 24 10 18 8 12 Z",
-      "M-14 -20 C-8 -30 2 -32 8 -26 C0 -25 -6 -22 -10 -18 Z"],
-    heavy: [
-      "M-58 4 C-46 -26 4 -34 34 -14 C48 -5 49 8 36 15 C12 30 -34 26 -58 10 Z",
-      "M-58 6 C-72 0 -84 -8 -94 -18 C-87 -4 -87 14 -94 28 C-82 20 -70 13 -58 8 Z"],
-    paths: [
-      "M16 -24 C12 -40 6 -50 -4 -62 M17 -25 C15 -42 15 -52 18 -64 M19 -24 C24 -40 32 -50 44 -60 M18 -24 C20 -38 24 -46 30 -55 M15 -25 C11 -38 7 -46 2 -54",
-      "M37 8 C25 14 10 17 -4 16",
-      "M28 11 l0 5 M20 14 l0 5 M11 16 l0 5 M2 16 l0 5",
-      "M-6 18 C2 30 14 33 24 30"],
-    hatch: [
-      "M-44 12 C-32 19 -16 22 0 22", "M-40 -4 C-28 -14 -8 -20 8 -20",
-      "M-26 20 C-22 14 -20 8 -20 2", "M-10 22 C-6 15 -4 9 -4 2",
-      "M6 21 C10 15 12 9 12 3", "M-72 -6 C-70 2 -70 10 -72 18"],
-    rings: [[26, -10, 4]], dots: [[26, -10, 2]] },
-
-  ship: {
-    fills: [
-      "M-52 2 C-46 21 34 23 52 0 C30 11 -28 11 -52 2 Z",
-      "M-32 -8 C-24 -13 -8 -13 -4 -8 L-4 -32 C-11 -35 -25 -35 -32 -32 Z",
-      "M-29 -36 C-23 -40 -11 -40 -7 -36 L-7 -50 C-12 -52 -23 -52 -29 -50 Z",
-      "M2 -10 C10 -15 26 -15 30 -10 L30 -36 C23 -39 8 -39 2 -36 Z",
-      "M5 -40 C11 -44 23 -44 27 -40 L27 -56 C21 -58 10 -58 5 -56 Z",
-      "M8 -62 L30 -66 L8 -70 Z"],
-    heavy: ["M-52 2 C-46 21 34 23 52 0 C30 11 -28 11 -52 2 Z"],
-    paths: [
-      "M-18 10 L-18 -52 M16 10 L16 -62 M34 8 L34 -34",
-      "M34 -34 C40 -30 46 -22 52 0 M-18 -52 C-30 -44 -42 -30 -52 2",
-      "M52 0 L70 -10", "M-52 2 L-64 -6"],
-    hatch: [
-      "M-28 -30 L-28 -10 M-22 -32 L-22 -10 M-16 -32 L-16 -10 M-10 -33 L-10 -10",
-      "M-25 -48 L-25 -37 M-19 -49 L-19 -38 M-13 -49 L-13 -38",
-      "M6 -34 L6 -12 M12 -36 L12 -12 M18 -36 L18 -12 M24 -35 L24 -12",
-      "M9 -54 L9 -42 M15 -55 L15 -42 M21 -54 L21 -42",
-      "M-70 14 C-62 9 -54 18 -46 13 M-38 17 C-30 12 -22 21 -14 16 M-6 18 C2 13 10 22 18 17 M26 16 C34 11 42 20 50 15"],
-    rings: [], dots: [] },
-
-  dragon: {
-    fills: [
-      "M-24 20 C-36 6 -30 -10 -12 -17 C4 -23 24 -20 33 -9 C40 0 37 10 26 16 C11 24 -10 26 -24 20 Z",
-      "M30 -8 C38 -15 46 -25 55 -32 L62 -23 C52 -17 45 -8 35 -2 Z",
-      "M52 -33 C62 -42 78 -38 80 -27 C81 -19 72 -14 64 -18 C57 -21 51 -27 52 -33 Z",
-      "M2 -14 C-4 -48 18 -72 52 -76 C36 -60 27 -42 26 -18 Z",
-      "M-16 -10 C-24 -38 -10 -60 10 -70 C-2 -52 -8 -32 -6 -14 Z",
-      "M-24 16 C-46 24 -66 22 -80 12 L-88 20 C-70 33 -44 38 -22 28 Z",
-      "M56 -36 L58 -50 L66 -38 Z", "M68 -32 L80 -42 L74 -28 Z"],
-    heavy: [
-      "M-24 20 C-36 6 -30 -10 -12 -17 C4 -23 24 -20 33 -9 C40 0 37 10 26 16 C11 24 -10 26 -24 20 Z",
-      "M52 -33 C62 -42 78 -38 80 -27 C81 -19 72 -14 64 -18 C57 -21 51 -27 52 -33 Z",
-      "M2 -14 C-4 -48 18 -72 52 -76 C36 -60 27 -42 26 -18 Z"],
-    paths: [
-      "M64 -18 C65 -10 72 -6 81 -8 C74 -11 70 -14 68 -18",
-      "M70 -12 l2 5 M76 -12 l1 5",
-      "M2 -14 C12 -36 26 -54 46 -73 M8 -17 C17 -35 27 -48 39 -63 M15 -18 C22 -33 30 -43 38 -53",
-      "M-16 -10 C-8 -34 0 -50 8 -66",
-      "M-6 24 C-8 34 -14 41 -23 44 M18 20 C18 30 14 37 6 41",
-      "M-23 44 l-8 3 M-23 44 l-2 7 M-27 45 l-4 6",
-      "M6 41 l-8 3 M6 41 l-1 7 M2 42 l-4 6",
-      "M-88 20 L-98 14 L-86 26"],
-    hatch: [
-      "M-16 14 C-8 20 4 22 16 20", "M-20 6 C-10 13 4 16 18 14",
-      "M-6 -14 C-4 -8 -4 -2 -6 4", "M6 -16 C8 -10 8 -4 6 2", "M18 -16 C20 -10 20 -4 18 2",
-      "M-40 20 C-46 22 -54 22 -62 19", "M-46 26 C-54 27 -62 26 -70 22"],
-    rings: [[64, -28, 4]], dots: [[64, -28, 2]] },
-
-  rose: {
-    fills: [
-      "M0 -54 L9 -9 L0 0 Z", "M54 0 L9 9 L0 0 Z", "M0 54 L-9 9 L0 0 Z", "M-54 0 L-9 -9 L0 0 Z",
-      "M32 -32 L7 -7 L0 0 Z", "M32 32 L8 8 L0 0 Z", "M-32 32 L-7 7 L0 0 Z", "M-32 -32 L-8 -8 L0 0 Z",
-      "M0 -70 L5 -60 L-5 -60 Z"],
-    heavy: ["M0 -54 L9 -9 L54 0 L9 9 L0 54 L-9 9 L-54 0 L-9 -9 Z"],
-    paths: ["M32 -32 L7 -7 L32 32 L8 8 L-32 32 L-7 7 L-32 -32 L-8 -8 Z"],
-    hatch: [], rings: [[0, 0, 46], [0, 0, 35]], dots: [] },
-};
-
-/* [kind, lon, lat, scale, rotation, flip] */
-const MONSTERS = [
-  ["kraken", -143, 36, 1.0, -8, false],
-  ["serpent", -58, 38, 0.72, 7, false],
-  ["whale", -156, 51, 0.85, -6, true],
-  ["serpent", -90, 23.5, 0.5, -5, true],
-  ["ship", -64, 30, 0.7, 0, false],
-  ["ship", -132, 25, 0.58, 5, true],
-  ["dragon", -117, 58, 0.8, 0, false],
-  ["rose", -153, 44, 0.78, 0, false],
-];
-
-const FOG_BODY = "#9fadaa", FOG_INK = "#576664";
-
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
-function Beast({ kind, x, y, s, rot, flip }) {
-  const b = BEAST[kind];
-  return (
-    <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${flip ? -s : s} ${s})`}
-       strokeLinecap="round" strokeLinejoin="round">
-      <g fill={FOG_BODY} stroke="none">
-        {(b.fills || []).map((d, i) => <path key={i} d={d} />)}
-      </g>
-      <g fill="none" stroke={FOG_INK}>
-        {(b.fills || []).map((d, i) => <path key={"o" + i} d={d} strokeWidth={2.2 / s} />)}
-        {(b.heavy || []).map((d, i) => <path key={"h" + i} d={d} strokeWidth={3.2 / s} />)}
-        {(b.paths || []).map((d, i) => <path key={"p" + i} d={d} strokeWidth={1.7 / s} />)}
-        {(b.hatch || []).map((d, i) => <path key={"t" + i} d={d} strokeWidth={1 / s} opacity="0.7" />)}
-        {(b.rings || []).map(([cx, cy, r], i) => <circle key={"r" + i} cx={cx} cy={cy} r={r} strokeWidth={1.8 / s} />)}
-      </g>
-      {(b.dots || []).map(([cx, cy, r], i) => <circle key={"d" + i} cx={cx} cy={cy} r={r} fill={FOG_INK} />)}
-    </g>
-  );
-}
+const BAR_H = 46;
 
+/* Links are stored as an article title, or [label, article title]. */
+const wu = (t) => "https://en.wikipedia.org/wiki/" + encodeURIComponent(t.replace(/ /g, "_"));
+const Links = ({ items, color }) => (
+  <span style={{ color: "#7d918d" }}>
+    {items.map((x, i) => {
+      const [lab, art] = Array.isArray(x) ? x : [x, x];
+      return (
+        <span key={art}>
+          {i > 0 ? " · " : null}
+          <a href={wu(art)} target="_blank" rel="noopener noreferrer"
+             style={{ color, textDecoration: "underline", textDecorationColor: "rgba(200,220,215,0.28)",
+                      textUnderlineOffset: "2px" }}>{lab}</a>
+        </span>
+      );
+    })}
+  </span>
+);
+
+/* The map is one masked, filtered SVG: anything that changes inside it forces the
+   browser to re-rasterise the blur and the noise for the whole frame. That is fine
+   on a laptop and miserable on a phone. Below this bar we drop the texture, soften
+   the mask blur, shorten the fades and hold the camera still. */
+const isLow = () =>
+  typeof window !== "undefined" &&
+  (!!window.matchMedia?.("(max-width: 1023px)").matches ||
+   !!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ||
+   (navigator.hardwareConcurrency || 8) <= 2);
 
 export default function TheFog() {
   const g = useMemo(() => {
@@ -436,12 +316,22 @@ export default function TheFog() {
   const [step, setStep] = useState(0);
   const [share, setShare] = useState(null);
   const [busy, setBusy] = useState(false);
+  const [pinned, setPinned] = useState(false);
+  const [low, setLow] = useState(isLow);
   const svgRef = useRef(null), labRef = useRef(null), conjRef = useRef(null);
   const secRefs = useRef([]);
+  const headRef = useRef(null), headBot = useRef(0), remeasure = useRef(() => {});
   const viewRef = useRef({ x: 0, y: 0, w: g.W, h: g.H });
   const rafRef = useRef(0), holdRef = useRef(0);
   const cur = step > 0 ? CH[step - 1] : null;
   const pct = CHARTED[step];
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 1023px)");
+    const on = () => setLow(isLow());
+    mq.addEventListener?.("change", on);
+    return () => mq.removeEventListener?.("change", on);
+  }, []);
 
   /* ---------- camera: fly in, let the line trace, then pull back ---------- */
   const apply = useCallback((v) => {
@@ -485,13 +375,13 @@ export default function TheFog() {
   useEffect(() => {
     const full = { x: 0, y: 0, w: g.W, h: g.H }, near = targetFor(step);
     clearTimeout(holdRef.current);
-    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) { apply(near); return; }
+    if (low) { if (viewRef.current.w !== g.W) apply(full); return; }
     glide(near, 1150);
     if (near !== full && (near.w < g.W - 1)) {
       holdRef.current = setTimeout(() => glide(full, 1700), 3200); // after the line has traced
     }
     return () => { clearTimeout(holdRef.current); cancelAnimationFrame(rafRef.current); };
-  }, [step, g.W, g.H, targetFor, glide, apply]);
+  }, [step, low, g.W, g.H, targetFor, glide, apply]);
 
   useEffect(() => { apply(viewRef.current); }, [apply]);
 
@@ -502,30 +392,48 @@ export default function TheFog() {
      the reading line, which is monotone in scroll position and cannot skip. */
   useEffect(() => {
     let raf = 0;
+    /* Offsets are cached. The previous version called getBoundingClientRect on all
+       twenty-four blocks every scroll frame — twenty-four forced layouts a frame,
+       on top of everything the map is already doing. */
+    let tops = [];
+    const measure = () => {
+      const y = window.scrollY;
+      tops = secRefs.current.map((el) => {
+        if (!el) return Infinity;
+        const block = el.firstElementChild || el;
+        return block.getBoundingClientRect().top + y;
+      });
+      headBot.current = headRef.current ? headRef.current.getBoundingClientRect().bottom + y : 0;
+    };
     const pick = () => {
       raf = 0;
-      const line = window.innerHeight * (window.innerWidth < 1024 ? 0.80 : 0.68);
+      const y = window.scrollY;
+      const line = y + window.innerHeight * (window.innerWidth < 1024 ? 0.80 : 0.68);
       let active = 0;
-      secRefs.current.forEach((el, i) => {
-        if (!el) return;
-        const block = el.firstElementChild || el;
-        if (block.getBoundingClientRect().top <= line) active = i;
-      });
+      for (let i = 0; i < tops.length; i++) if (tops[i] <= line) active = i;
       const el = secRefs.current[active];
       if (el) setStep(Math.max(0, Math.min(CH.length, +el.dataset.step)));
+      setPinned(y > Math.max(40, headBot.current - BAR_H - 12));
     };
     const onScroll = () => { if (!raf) raf = requestAnimationFrame(pick); };
-    pick();
+    const onResize = () => { measure(); onScroll(); };
+    remeasure.current = onResize;
+    measure(); pick();
+    const settle = setTimeout(onResize, 400);
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
+    window.addEventListener("resize", onResize);
     document.addEventListener("scroll", onScroll, { passive: true, capture: true });
     return () => {
+      clearTimeout(settle);
       cancelAnimationFrame(raf);
       window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
+      window.removeEventListener("resize", onResize);
       document.removeEventListener("scroll", onScroll, { capture: true });
     };
   }, []);
+
+  /* anything that changes the page height invalidates the cached offsets */
+  useEffect(() => { remeasure.current(); }, [share, low]);
 
   /* ---------- #12 deep links ---------- */
   const scrollTo = useCallback((n) => {
@@ -557,18 +465,6 @@ export default function TheFog() {
       })).join("");
       const routes = CH.slice(0, 21).filter((c) => c.b.length > 1).map((c) =>
         `<path d="M${c.b.map(([lo, la]) => g.P(lo, la).map((v) => v.toFixed(1)).join(" ")).join("L")}" fill="none" stroke="#a8402c" stroke-width="1.3" opacity=".3"/>`).join("");
-      const beasts = MONSTERS.map(([k, lo, la, s, rot, flip]) => {
-        const [x, y] = g.P(lo, la), b = BEAST[k];
-        const P2 = (a, w, o) => (a || []).map((d) => `<path d="${d}" stroke-width="${(w / s).toFixed(2)}"${o ? ` opacity="${o}"` : ""}/>`).join("");
-        const inner =
-          `<g fill="${FOG_BODY}" stroke="none">${(b.fills || []).map((d) => `<path d="${d}"/>`).join("")}</g>`
-          + `<g fill="none" stroke="${FOG_INK}" stroke-linecap="round" stroke-linejoin="round">`
-          + P2(b.fills, 2.2) + P2(b.heavy, 3.2) + P2(b.paths, 1.7) + P2(b.hatch, 1, "0.7")
-          + (b.rings || []).map(([cx, cy, r]) => `<circle cx="${cx}" cy="${cy}" r="${r}" stroke-width="${(1.8 / s).toFixed(2)}"/>`).join("")
-          + `</g>`
-          + (b.dots || []).map(([cx, cy, r]) => `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${FOG_INK}"/>`).join("");
-        return `<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${rot}) scale(${flip ? -s : s} ${s})">${inner}</g>`;
-      }).join("");
       const words = CONJ.map(([t, lo, la, sz, sp, it]) => {
         const [x, y] = g.P(lo, la);
         return `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="middle" font-size="${sz}" letter-spacing="${sp}" font-style="${it ? "italic" : "normal"}" font-family="Georgia,serif" fill="#7a8b88">${esc(t)}</text>`;
@@ -580,7 +476,7 @@ export default function TheFog() {
 <path d="${g.land}" fill="#dcd2b6" fill-rule="evenodd"/><path d="${g.lake}" fill="#16333a"/>
 <path d="${g.river}" fill="none" stroke="#3f6a75" stroke-width="1.1" opacity=".85"/>
 <path d="${g.land}" fill="none" stroke="#22322e" stroke-width="1.1"/>${routes}
-<g mask="url(#mk)"><rect width="${g.W}" height="${g.H}" fill="#b6bfbb"/>${beasts}${words}</g></svg>`;
+<g mask="url(#mk)"><rect width="${g.W}" height="${g.H}" fill="#b6bfbb"/>${words}</g></svg>`;
       const url = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml" }));
       const img = new Image();
       await new Promise((res, rej) => { img.onload = res; img.onerror = rej; img.src = url; });
@@ -611,7 +507,33 @@ export default function TheFog() {
     <div className="w-full" style={{ background: "#070e10", color: "#c3cfcb",
       fontFamily: "ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif" }}>
 
-      <header className="max-w-[1500px] mx-auto px-5 sm:px-8 pt-8 pb-5">
+      {/* Compact pinned bar — takes over once the full title has scrolled off. */}
+      <div aria-hidden={!pinned}
+        style={{ position: "fixed", top: 0, left: 0, right: 0, height: BAR_H, zIndex: 40,
+                 background: "#070e10", borderBottom: "1px solid #1d2f30",
+                 transform: pinned ? "translateY(0)" : `translateY(-${BAR_H + 2}px)`,
+                 transition: "transform 240ms cubic-bezier(.3,0,.2,1)",
+                 pointerEvents: pinned ? "auto" : "none" }}>
+        <div className="max-w-[1500px] mx-auto px-5 sm:px-8 flex items-center gap-3" style={{ height: "100%" }}>
+          <span style={{ fontFamily: "ui-serif, Georgia, 'Times New Roman', serif", fontSize: "1.05rem", color: "#e7ede9" }}>
+            The Fog
+          </span>
+          <span className="hidden sm:inline text-[10px] tracking-[0.28em] uppercase" style={{ color: "#4f6663" }}>
+            North America · 1000–1900
+          </span>
+          <span className="flex-1" />
+          <span className="tabular-nums leading-none"
+                style={{ fontFamily: "ui-serif, Georgia, serif", fontSize: "1.05rem", color: cur ? BRASS : "#41544f" }}>
+            {cur ? cur.yr : "—"}
+          </span>
+          <span className="tabular-nums leading-none text-xs"
+                style={{ fontFamily: "ui-monospace, Menlo, monospace", color: pct === 100 ? "#8fbf9a" : "#9db0ab" }}>
+            {100 - pct}% fog
+          </span>
+        </div>
+      </div>
+
+      <header ref={headRef} className="max-w-[1500px] mx-auto px-5 sm:px-8 pt-8 pb-5">
         <div className="text-[10px] sm:text-[11px] tracking-[0.28em] uppercase" style={{ color: "#6b8580" }}>
           North America, 1000–1900 · what each map burned away
         </div>
@@ -628,47 +550,54 @@ export default function TheFog() {
       <div className="max-w-[1500px] mx-auto lg:flex lg:gap-8 px-5 sm:px-8">
 
         {/* ---------------- sticky map ---------------- */}
-        <div className="sticky top-0 z-20 self-start lg:w-[57%] flex flex-col"
-             style={{ background: "#070e10" }}>
+        <div className="sticky z-20 self-start lg:w-[57%] flex flex-col"
+             style={{ top: BAR_H, background: "#070e10" }}>
           <div className="rounded-md overflow-hidden mt-2"
                style={{ border: "1px solid #1d2f30", background: "#0c1a1d" }}>
             <svg ref={svgRef} viewBox={`0 0 ${g.W} ${g.H}`}
                  className="block w-full h-auto"
-                 style={{ maxHeight: "74vh" }}
+                 style={{ maxHeight: "70vh" }}
                  preserveAspectRatio="xMidYMid meet">
               <defs>
                 <filter id="feather" x="-15%" y="-15%" width="130%" height="130%">
-                  <feGaussianBlur stdDeviation="17" />
+                  <feGaussianBlur stdDeviation={low ? 12 : 17} />
                 </filter>
-                {/* one texture pass, not three — full-area filters are expensive on phones.
-                    Noise drives alpha only, so nothing beneath the fog can show through. */}
-                <filter id="fogtex" x="0%" y="0%" width="100%" height="100%">
-                  <feTurbulence type="fractalNoise" baseFrequency="0.0034" numOctaves="4" seed="12" result="n1" />
-                  <feColorMatrix in="n1" type="matrix"
-                    values="0 0 0 0 0.10  0 0 0 0 0.14  0 0 0 0 0.14  0.34 0.34 0.34 0 -0.05" result="c1" />
-                  <feTurbulence type="fractalNoise" baseFrequency="0.0062" numOctaves="3" seed="31" result="n2" />
-                  <feColorMatrix in="n2" type="matrix"
-                    values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.3 0.3 0.3 0 -0.06" result="c2" />
-                  <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="2" seed="4" result="n3" />
-                  <feColorMatrix in="n3" type="matrix"
-                    values="0 0 0 0 0.2  0 0 0 0 0.24  0 0 0 0 0.23  0.3 0.3 0.3 0 -0.12" result="c3" />
-                  <feMerge><feMergeNode in="c1" /><feMergeNode in="c2" /><feMergeNode in="c3" /></feMerge>
-                </filter>
+                {/* Full-area turbulence, re-rasterised whenever anything in the map
+                    moves. Six octaves instead of nine, and skipped entirely on phones —
+                    they get the flat wash below instead. */}
+                {!low && (
+                  <filter id="fogtex" x="0%" y="0%" width="100%" height="100%">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.0034" numOctaves="3" seed="12" result="n1" />
+                    <feColorMatrix in="n1" type="matrix"
+                      values="0 0 0 0 0.10  0 0 0 0 0.14  0 0 0 0 0.14  0.34 0.34 0.34 0 -0.05" result="c1" />
+                    <feTurbulence type="fractalNoise" baseFrequency="0.0062" numOctaves="2" seed="31" result="n2" />
+                    <feColorMatrix in="n2" type="matrix"
+                      values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.3 0.3 0.3 0 -0.06" result="c2" />
+                    <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="1" seed="4" result="n3" />
+                    <feColorMatrix in="n3" type="matrix"
+                      values="0 0 0 0 0.2  0 0 0 0 0.24  0 0 0 0 0.23  0.3 0.3 0.3 0 -0.12" result="c3" />
+                    <feMerge><feMergeNode in="c1" /><feMergeNode in="c2" /><feMergeNode in="c3" /></feMerge>
+                  </filter>
+                )}
+                <linearGradient id="fogshade" x1="0" y1="0" x2="0.3" y2="1">
+                  <stop offset="0" stopColor="#c3ccc7" />
+                  <stop offset="1" stopColor="#a7b3af" />
+                </linearGradient>
                 <mask id="lift">
                   <rect x="0" y="0" width={g.W} height={g.H} fill="#fff" />
                   <g filter="url(#feather)">
                     {CH.map((c) => c.full ? (
                       <rect key={c.n} x={-g.W} y={-g.H} width={g.W * 3} height={g.H * 3} fill="#000"
                             opacity={step >= c.n ? 1 : 0}
-                            style={{ transition: "opacity 2600ms cubic-bezier(.33,0,.2,1)" }} />
+                            style={{ transition: `opacity ${low ? 1100 : 2600}ms cubic-bezier(.33,0,.2,1)` }} />
                     ) : (
                       <g key={c.n}>
                         {c.b.map(([lo, la, km], i) => {
                           const [x, y] = g.P(lo, la);
                           return <circle key={i} cx={x} cy={y} r={km * g.scale} fill="#000"
                             opacity={step >= c.n ? 1 : 0}
-                            style={{ transition: "opacity 620ms ease-out",
-                                     transitionDelay: `${step >= c.n ? (i / Math.max(1, c.b.length - 1)) * 900 : 0}ms` }} />;
+                            style={{ transition: `opacity ${low ? 420 : 620}ms ease-out`,
+                                     transitionDelay: `${!low && step >= c.n ? (i / Math.max(1, c.b.length - 1)) * 900 : 0}ms` }} />;
                         })}
                       </g>
                     ))}
@@ -690,7 +619,7 @@ export default function TheFog() {
                     stroke={MADDER} strokeWidth={cur && cur.n === c.n ? 2.1 : 1.3} vectorEffect="non-scaling-stroke"
                     strokeDasharray="1" strokeDashoffset={step >= c.n ? 0 : 1}
                     opacity={step < c.n ? 0 : cur && cur.n === c.n ? 0.95 : 0.22}
-                    style={{ transition: "stroke-dashoffset 1700ms cubic-bezier(.3,0,.2,1), opacity 700ms" }} />
+                    style={{ transition: `stroke-dashoffset ${low ? 800 : 1700}ms cubic-bezier(.3,0,.2,1), opacity 700ms` }} />
                 ))}
               </g>
 
@@ -701,16 +630,10 @@ export default function TheFog() {
                 })}
               </g>
 
-              {/* ---- the fog, and what lives in it ---- */}
+              {/* ---- the fog, and the words written on it ---- */}
               <g mask="url(#lift)">
-                <rect x="0" y="0" width={g.W} height={g.H} fill={FOG} />
-                <rect x="0" y="0" width={g.W} height={g.H} filter="url(#fogtex)" />
-                <g>
-                  {MONSTERS.map(([k, lo, la, s, rot, flip], i) => {
-                    const [x, y] = g.P(lo, la);
-                    return <Beast key={i} kind={k} x={x} y={y} s={s} rot={rot} flip={flip} />;
-                  })}
-                </g>
+                <rect x="0" y="0" width={g.W} height={g.H} fill={low ? "url(#fogshade)" : FOG} />
+                {!low && <rect x="0" y="0" width={g.W} height={g.H} filter="url(#fogtex)" />}
                 <g ref={conjRef} style={{ fontFamily: "ui-serif, Georgia, serif", fontSize: "16px", fill: "#7a8b88" }}>
                   {CONJ.map(([t, lo, la, sz, sp, it, kill], i) => {
                     const [x, y] = g.P(lo, la);
@@ -759,8 +682,8 @@ export default function TheFog() {
                     Before any of it
                   </h2>
                   <p className="mt-3 text-sm leading-relaxed" style={{ color: "#9db0ab" }}>
-                    A continent under cloud, with sea monsters where the soundings run out and Latin where the
-                    knowledge does. Twenty-two expeditions clear it, one route at a time. Watch how little each
+                    A continent under cloud, with Latin where the knowledge runs out and conjecture where the
+                    soundings do. Twenty-two expeditions clear it, one route at a time. Watch how little each
                     one actually opens — and notice who was doing the guiding.
                   </p>
                   <p className="mt-4 text-xs" style={{ color: "#4f6663" }}>Scroll ↓</p>
@@ -804,6 +727,18 @@ export default function TheFog() {
                       <div style={{ borderLeft: `2px solid ${BRASS}`, paddingLeft: 10 }}>
                         <span className="block text-[10px] tracking-[0.2em] uppercase mb-0.5" style={{ color: "#4f6663" }}>Added to the map</span>
                         <span style={{ color: "#c9b184" }}>{s.c.add.join(" · ")}</span>
+                      </div>
+                    )}
+                    {s.c.see && s.c.see.length > 0 && (
+                      <div style={{ borderLeft: "2px solid #4d7d68", paddingLeft: 10 }}>
+                        <span className="block text-[10px] tracking-[0.2em] uppercase mb-0.5" style={{ color: "#4f6663" }}>Still there</span>
+                        <Links items={s.c.see} color="#8fbf9a" />
+                      </div>
+                    )}
+                    {s.c.wiki && s.c.wiki.length > 0 && (
+                      <div style={{ borderLeft: "2px solid #3c4f4c", paddingLeft: 10 }}>
+                        <span className="block text-[10px] tracking-[0.2em] uppercase mb-0.5" style={{ color: "#4f6663" }}>Read the record</span>
+                        <Links items={s.c.wiki} color="#a9bcb7" />
                       </div>
                     )}
                   </div>
@@ -856,8 +791,7 @@ export default function TheFog() {
                     carry the fog, not survey lines. Figures and dates come from general accounts and are
                     approximate; treat the round numbers as round. The Arctic runs second-to-last though it starts
                     in 1576, because that is how it behaved on the maps: still blank when everything else had
-                    filled. Beasts drawn by hand, in the tradition of putting something in the space where the
-                    soundings stop.
+                    filled. Every link goes to Wikipedia; the green ones are places you can still stand in.
                   </p>
                 </div>
               )}
